@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom animation</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            height:200px;
+            width:200px;
+            position: relative;
+        }
+
+        #red{
+            height: 40px;
+            width:40px;
+            background-color:red;
+            position:absolute;
+            top:0px;
+            left:0px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="move()">click me</button>
+    <br/>
+    <div class="yellow">
+        <div id="red">
+
+        </div>
+    </div>
+         
+</body>
+<script>
+    function move(){
+        var redelem = document.getElementById("red");
+        var poe = 0;
+        var anim = setInterval(animate, 5); // calling animate function after eack 5 seconds
+
+       function animate(){
+        if(poe==160){
+            clearInterval(anim);
+        }
+        poe++;
+          redelem.style.top = poe +"px";
+          redelem.style.left = poe +"px";
+       }
+     
+     
+    }
+    
+</script>
+</html>

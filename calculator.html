@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator </title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="first" name="first" />
+    <select id="opt">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      
+    </select>
+    <input type="number" id="second" name="second"/>
+    <br>
+    <button onclick="submitted()">
+        submit
+    </button>
+    <input type="text" name="" id="result" readonly="" />
+</body>
+<script>
+    function submitted(){
+    var a= document.getElementById("first").value;
+    var b= document.getElementById("second").value;
+    var c= document.getElementById("opt").value;
+    
+    if( c=="+"){
+     var res= parseInt(a)+ parseInt(b);
+    }
+    if(c=="-"){
+        
+      var  res= parseInt(a)- parseInt(b);
+    }
+    if( c=="*"){
+       var res= parseInt(a)* parseInt(b);
+    }
+    if(c=="/"){
+     var res= parseInt(a)/ parseInt(b);
+    }
+   document.getElementById("result").value = res;
+    }
+</script>
+
+
+</html>

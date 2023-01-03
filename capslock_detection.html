@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+
+<body>
+    <form style="text-align:center;" onsubmit="return validate()">
+        <fieldset>
+            <legend>resistration</legend>
+            <div>
+                Enter your Name *:<br/>
+                <input type="text" required="" />
+            </div>
+            <br />
+            <div >
+               <label for="password" > Enter your Password:</label><br/>
+
+                <input type="password" id="password" required=""/>
+
+            </div>
+            <br/>
+            <div>
+                <label for="password1">Re-enter the Password: </label><br/>
+                <input type="password" id="password1" onkeyup="check(this)" />
+                <br/>
+                <error id="alert" style="color:red;"></error>
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="submit" name="submit" />
+                
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+<script>
+    window.addEventListener('keyup',event=>{
+      var iscaps = event.getModifierState("CapsLock");
+
+    if (iscaps){
+        document.getElementById('alert').innerText= "capslock is on";
+    }
+    else{
+        document.getElementById("alert").innerText = '';
+    }
+    })
+   
+</script>
+
+</html>

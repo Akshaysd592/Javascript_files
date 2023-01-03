@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Exp</title>
+    
+</head>
+<body>
+    
+    <form style="text-align:center;" onsubmit="return validate()">
+        <fieldset>
+            <legend>resistration</legend>
+            <div>
+                Enter your Name *:<br/>
+                <input type="text" required="" onkeyup="white(this.value)"/>
+            </div>
+            <br />
+            <div >
+               <label for="password" > Enter your Password:</label><br/>
+
+                <input type="password" id="password" required="" onkeyup="white(this.value)"/>
+
+            </div>
+            <br/>
+            <div>
+                <label for="password1">Re-enter the Password: </label><br/>
+                <input type="password" id="password1" onkeyup="white(this.value)" />
+                <br/>
+                <error id="alert"></error>
+            </div>
+            <br />
+            <div id="condition" style="color:grey;">
+                Enter at least one capital letter
+            
+            </div>
+            <div class="condition1" style="color:grey;">
+                Enter at least one small letter
+            
+            </div>
+            <div>
+                <input type="submit" value="submit" name="submit" />
+                
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+<script>
+    // var pattern = /[a-z][0-9]/ig;
+    // var str = "wscubgoodone";
+    // console.log(pattern.exec(str));
+    // console.log(pattern.test(str));
+// var  pattern = new RegExp("[a-z][[A-Z[0-9]",'i');
+//     console.log(pattern.toString());
+var classcheck= document.getElementsByClassName("condition1");
+
+ function white(elem){
+    var capital = new RegExp("[A-Z]");
+    var small = new RegExp("[a-z]");
+    if(capital.test(elem)){
+       document.getElementById("condition").style.color = "red";
+    }
+    else{
+        document.getElementById("condition").style.color = "grey";
+    }
+    if(small.test(elem)){
+       classcheck[0].style.color = "red";
+    }
+    else{
+        classcheck[0].style.color = "grey";
+    }
+ }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+</head>
+<body>
+   <h1 id="res"></h1>
+   <button onclick="pop()">pop</button>
+   <button onclick="push()">push</button>
+   <button onclick="slice()">slice</button>
+   <button onclick="reverse()">reverse</button>
+   <button onclick="shift()">shift</button>
+</body>
+<script>
+    var arr = ["apple","banana","oranges","grapes","pineapple","jauva"];
+    // var arr2 = [ "carrot" ,"cabbage"];
+    // var flag = Array.isArray(arr);
+    // var flag = arr.valueOf(arr);
+    // var flag= arr.join("#");
+    // var shop= arr2.concat(arr);
+    // var index = shop.indexOf("banana");
+    // document.write("<h1>"+shop+"<h1>");
+    // document.write("<h1>"+index+"<h1>");
+  var demo = arr;
+
+    document.getElementById("res").innerText = demo;
+    function pop(){
+        demo.pop();
+        document.getElementById("res").innerText = demo;
+
+    }
+    function push(){
+        demo.push(prompt("Enter the fruit: "));
+        document.getElementById("res").innerText = demo;
+
+    }
+    function slice(){
+        var x = demo.slice(1,2);
+        document.getElementById("res").innerText = x;
+    }
+    function reverse(){
+        demo.reverse();
+        document.getElementById("res").innerText = demo;
+    }
+    function shift(){
+        var x =demo.shift();
+        document.getElementById("res").innerText = x;
+    }
+</script>
+</html>

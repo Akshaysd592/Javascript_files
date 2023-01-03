@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+
+<body>
+    <form style="text-align:center;" onsubmit="return validate()">
+        <fieldset>
+            <legend>resistration</legend>
+            <div>
+                Enter your Name *:<br/>
+                <input type="text" required="" onkeyup="white(this.value)"/>
+            </div>
+            <br />
+            <div >
+               <label for="password" > Enter your Password:</label><br/>
+
+                <input type="password" id="password" required="" onkeyup="white(this.value)"/>
+
+            </div>
+            <br/>
+            <div>
+                <label for="password1">Re-enter the Password: </label><br/>
+                <input type="password" id="password1" onkeyup="check(this)" />
+                <br/>
+                <error id="alert"></error>
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="submit" name="submit" />
+                
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+<script>
+   var pattern = /\s/g; // indicating space by /\s/g;
+    var alert = document.getElementById('alert');
+   function white(data){
+    var isspace = pattern.test(data);
+    if(isspace){
+    alert.innerText= "Please remove space";
+    }
+    else{
+         alert.innerText = "";
+    }
+   }
+</script>
+
+</html>

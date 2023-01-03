@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing data </title>
+</head>
+
+<body id="body">
+    <center>
+        <img src="pexels-sebastiaan-stam-1097456.jpg" alt="no image found"  height="200" width="400"/>
+    <p id="data">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem harum unde necessitatibus molestiae assumenda
+        repellendus libero? Quidem sint quos eius ex, tempora officiis explicabo quae voluptatibus voluptates optio
+        dolores eaque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perferendis quod ex quibusdam aut temporibus,
+        cumque ab molestiae a cupiditate voluptatem delectus. Fuga minima illum architecto veniam aut. Earum, obcaecati?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem harum unde necessitatibus molestiae assumenda
+        repellendus libero? Quidem sint quos eius ex, tempora officiis explicabo quae voluptatibus voluptates optio
+        dolores eaque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perferendis quod ex quibusdam aut temporibus,
+        cumque ab molestiae a cupiditate voluptatem delectus. Fuga minima illum architecto veniam aut. Earum, obcaecati?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem harum unde necessitatibus molestiae assumenda
+        repellendus libero? Quidem sint quos eius ex, tempora officiis explicabo quae voluptatibus voluptates optio
+        dolores eaque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perferendis quod ex quibusdam aut temporibus,
+        cumque ab molestiae a cupiditate voluptatem delectus. Fuga minima illum architecto veniam aut. Earum, obcaecati?
+    </p>
+    <button onclick="printpage()"> print content</button>
+</center>
+</body>
+<script type="text/javascript">
+    function printpage(){
+        var body =document.getElementById('body').innerHTML;
+        var data = document.getElementById("data").innerHTML;
+        document.getElementById('body').innerHTML =data ;
+         window.print(); 
+         document.getElementById('body').innerHTML = body;
+    }
+</script>
+
+</html>

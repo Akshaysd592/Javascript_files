@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cleartimeout working</title>
+</head>
+
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <button  onclick="interval()">Interval</button>
+    <button onclick="stopinterval()">stopInterval</button>
+    <h1 id="interv"></h1>
+</body>
+<script>
+    var my;
+    function start(){
+        my = setTimeout(function () {
+            document.write("<h1>hello duniya<h1>");
+        },
+            3000
+
+        );
+    }
+
+    function stop(){
+        clearTimeout(my);
+        alert('timeout stopped')
+    }
+
+    var intev;
+    var c = 0;
+    function interval(){
+       intev= setInterval(function(){
+           document.getElementById("interv").innerText = c;
+           c++;
+        }
+        , 1000
+        )
+        }
+
+        function stopinterval(){
+           clearInterval(intev); 
+        }
+    
+
+</script>
+
+</html>

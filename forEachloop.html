@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEachloop</title>
+</head>
+<body>
+   
+    
+</body>
+<script>
+    var cars = ["car1", "car2", "car3", "car4", "car5"];
+    cars.forEach(manipute)
+    function manipute(item,index,array){
+        
+        array[index]= item +"1";
+
+    }
+    cars.forEach(counting);
+    function counting(a,i){
+        document.write(a +" =>" + i +"<br>");
+    }
+</script>
+</html>

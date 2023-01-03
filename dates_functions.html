@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates functions in js</title>
+</head>
+<body>
+    <h1 id="res">
+
+    </h1>
+    <button onclick="getdate()">date</button>
+    <button onclick="getyear()">date</button>
+    <button onclick="getmonth()">month</button>
+    <button onclick="hours()">hours</button>
+    <button onclick="todate()">date</button>
+    <button onclick="time()">time</button>
+</body>
+<script>
+  var date = new Date();
+
+function getdate(){
+    document.getElementById("res").innerText = date;
+}
+function getyear(){
+    document.getElementById("res").innerText = date.getFullYear();
+}
+
+function getmonth(){
+    var month=["january","feb","march","april","may","june","july","august","sep","oct","nov","dec"];
+    document.getElementById("res").innerText = month[date.getMonth()] ;
+}
+
+function hours(){
+    document.getElementById("res").innerText= date.getHours();
+}
+function todate(){
+    document.getElementById("res").innerText= date.getDate();
+}
+function time(){
+    document.getElementById("res").innerText = date.getTime();
+}
+</script>
+</html>
