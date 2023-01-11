@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finding sqrt</title>
+</head>
+<body>
+    Put input whose squareroot to be find 
+   <input type="number"  class="sqt" >
+   <br/>
+   <br/>
+   here is your squareroot:
+   <input  type="" id="out" readonly="">
+   <br/>
+   <br/>
+
+   <button onclick="squareroots()">click</button>
+
+</body>
+<script>
+  function squareroots(){
+    var sqt = document.getElementsByClassName("sqt")[0].value ;
+    var squareroot = Math.sqrt(sqt);
+    document.getElementById("out").value = squareroot;
+  }
+
+</script>
+</html>
